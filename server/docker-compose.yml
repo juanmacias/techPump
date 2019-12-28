@@ -1,10 +1,11 @@
 version: '2'
 
 services:
-   httpd:
-     build: .
-     ports:
+  httpd:
+    build: .
+    ports:
       - 8080:80
-     volumes:
+    volumes:
       - ..:/var/www/html
       - ./conf/apache:/etc/apache2/sites-enabled/
+      - ./conf/dns/etc_hosts:/etc/hosts
