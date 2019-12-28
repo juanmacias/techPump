@@ -14,6 +14,13 @@ abstract class Page {
 	protected $site_path;
 	protected $templates_path;
 
+	protected const PARTS = [
+		'head',
+		'top',
+		'main',
+		'bottom',
+	];
+
 	/**
 	 * Page constructor.
 	 *
@@ -44,10 +51,10 @@ abstract class Page {
 	 * Show a page
 	 */
 	final public function show():void {
-		echo $this->head();
-		echo $this->top();
-		echo $this->main();
-		echo $this->bottom();
+		foreach ( self::PARTS as $part ) {
+			echo $this->$part();
+			\flush();
+		}
 	}
 
 	/**
