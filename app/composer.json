@@ -1,0 +1,16 @@
+{
+    "name": "techpump/framework",
+    "description": "Library for this project",
+    "type": "project",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Manuel Canga",
+            "email": "dev@trasweb.net"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "codeception/codeception": "^3.0"
+    }
+}
