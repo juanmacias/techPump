@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  httpd:
+    build: .
+    ports:
+      - 8080:80
+    volumes:
+      - ..:/var/www/html
+      - ./conf/apache:/etc/apache2/sites-enabled/
+      - ./conf/dns/etc_hosts:/etc/hosts
+  composer:
+    restart: 'no'
+    image: composer/composer:latest
+    command: update
+    volumes:
+      - ../app:/app
