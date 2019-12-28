@@ -4,7 +4,7 @@ namespace techPump;
 
 class ServerCest
 {
-    public function TestAdminSiteExistst(AcceptanceTester $I)
+    public function AdminSiteExiststTest(AcceptanceTester $I)
     {
 		$I->amOnPage('http://sites.techpump.local');
 		$I->seeResponseCodeIs(200);
