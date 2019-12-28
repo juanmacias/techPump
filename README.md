@@ -2,7 +2,9 @@
 
 ## Requirements
 
-Add `127.0.0.1   sites.techpump.local` line in your `/etc/hosts` file
+Add `127.0.0.1   sites.techpump.local` line in your `/etc/hosts` file. This is site for manage sites.
+Add `127.0.0.1   cerdas.com` line in your `/etc/hosts` file. This is demo site.
+Add `127.0.0.1   conejox.com` line in your `/etc/hosts` file. This is demo site.
 
 ## Starting server
 
