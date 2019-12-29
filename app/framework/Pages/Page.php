@@ -11,8 +11,8 @@ namespace techPump\Pages;
  */
 abstract class Page {
 
-	protected $site_path;
 	protected $templates_path;
+	protected $options;
 
 	protected const PARTS = [
 		'head',
@@ -26,9 +26,8 @@ abstract class Page {
 	 *
 	 * @param string $templates_path Absolute path to templates
 	 */
-	public function __construct( string $site_path, string $templates_path = '' ) {
-		$this->site_path = $site_path;
-		$templates_path  = $templates_path ?: dirname( __DIR__, 2 ) . '/templates';
+	public function __construct( string $templates_path = '' ) {
+		$templates_path = $templates_path ?: dirname( __DIR__, 2 ) . '/templates';
 
 		$this->templates_path = $templates_path;
 	}
@@ -49,8 +48,14 @@ abstract class Page {
 
 	/**
 	 * Show a page
+	 *
+	 * @param array options vars which can be used in templates
+	 *
+	 * @return void
 	 */
-	final public function show():void {
+	final public function show(array $options = []):void {
+		$this->options = $options;
+
 		foreach ( self::PARTS as $part ) {
 			echo $this->$part();
 			\flush();
@@ -74,21 +79,21 @@ abstract class Page {
 	/**
 	 * Helper: Render a site file
 	 *
-	 * @param string $site_file Path to site file.
+	 * @param string $template Path to site file.
 	 *
 	 * @return string Output of render.
 	 */
-	final protected function render( string $template_file ):string {
-		$template = $this->getTemplateAbsolutePath( $template_file );
+	final protected function render( string $template ):string {
+		$template_file = $this->getTemplateAbsolutePath( $template );
 
-		if ( ! \file_exists( $template ) ) {
-			error_log( "Not found template: {$template}" );
+		if ( ! \file_exists( $template_file ) ) {
+			error_log( "Not found template file: {$template_file}" );
 
 			return '';
 		}
 
 		\ob_start();
-		include( $template );
+		include( $template_file );
 
 		$template_content = \ob_get_clean() ?: '';
 
@@ -109,5 +114,16 @@ abstract class Page {
 		$template = $this->templates_path . '/' . $template_file;
 
 		return $template;
+	}
+
+	/**
+	 * Magic method
+	 *
+	 * @param string $option_name
+	 *
+	 * @return string
+	 */
+	final public function __get( string $option_name ){
+		return $this->options[ $option_name ] ?? '';
 	}
 }

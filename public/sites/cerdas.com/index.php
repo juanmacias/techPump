@@ -1,10 +1,5 @@
 <?php
 
-//cerdas.com site
-use techPump\Pages\SitePage;
+use techPump\Loaders\Site;
 
-require "../../../app/framework/Pages/Page.php";
-require "../../../app/framework/Pages/SitePage.php";
-
-$page = new SitePage( __DIR__ );
-$page->show();
+( new Site( __DIR__ ) )->load();

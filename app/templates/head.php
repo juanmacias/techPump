@@ -3,7 +3,7 @@
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-   <title></title>
+   <title><?= $this->name ?></title>
 
    <!-- Star CSS and Javascript -->
    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen,projection">
