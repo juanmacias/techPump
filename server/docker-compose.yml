@@ -9,6 +9,7 @@ services:
       - ..:/var/www/html
       - ./conf/apache:/etc/apache2/sites-enabled/
       - ./conf/dns/etc_hosts:/etc/hosts
+      - ./conf/php/custom.ini:/usr/local/etc/php/conf.d/custom.ini
   composer:
     restart: 'no'
     image: composer/composer:latest
