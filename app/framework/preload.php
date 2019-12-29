@@ -13,6 +13,7 @@ if ( class_exists( ClassPreloader::class ) ) {
 require __DIR__ . '/Loaders/Preloader.php';
 
 $classes_list = [
+	'\techPump\Loaders\Site',
 	'\techPump\Pages\Page',
 	'\techPump\Pages\SitePage',
 ];

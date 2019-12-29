@@ -1,7 +1,5 @@
 <?php
 
-//cerdas.com site
-use techPump\Pages\SitePage;
+use techPump\Loaders\Site;
 
-$page = new SitePage( __DIR__ );
-$page->show();
+( new Site( __DIR__ ) )->load();
