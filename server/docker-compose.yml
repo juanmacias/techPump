@@ -15,4 +15,4 @@ services:
     image: composer/composer:latest
     command: update
     volumes:
-      - ../app:/app
+      - ../src:/app

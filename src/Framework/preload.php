@@ -1,9 +1,11 @@
 <?php
 
+define('__TECHPUMP__', dirname(__DIR__ ) );
+
 /**
  * This script preloads classes of framework in order to improve performance and avoid to have to use autoload
  */
-use techPump\Loaders\ClassPreloader;
+use techPump\Framework\Loaders\ClassPreloader;
 
 //avoid double execution
 if ( class_exists( ClassPreloader::class ) ) {
@@ -13,10 +15,10 @@ if ( class_exists( ClassPreloader::class ) ) {
 require __DIR__ . '/Loaders/Preloader.php';
 
 $classes_list = [
-	'\techPump\Loaders\Site',
-	'\techPump\Pages\Page',
-	'\techPump\Pages\SitePage',
+	\techPump\Framework\Loaders\Site::class,
+	\techPump\Framework\Pages\Page::class,
+	\techPump\Framework\Pages\SitePage::class,
 ];
 
-$preloader = new ClassPreloader( __DIR__ );
+$preloader = new ClassPreloader(  __TECHPUMP__ );
 $preloader->load( $classes_list );

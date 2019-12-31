@@ -1,9 +1,9 @@
 <?php
 
-namespace techPump\Loaders;
+namespace techPump\Framework\Loaders;
 
-use techPump\Pages\Page;
-use techPump\Pages\SitePage;
+use techPump\Framework\Pages\Page;
+use techPump\Framework\Pages\SitePage;
 
 /**
  * Class Site. Front controller
@@ -15,14 +15,12 @@ use techPump\Pages\SitePage;
 class Site {
 
 	private $site_path;
-	private $is_admin;
 
 	private const SITE_CONF_FILE = '/.metadata/site.conf.php';
 	private const SITE_PROTOCOL  = 'http://';
 
-	public function __construct( string $site_path, bool $is_admin = false ) {
+	public function __construct( string $site_path ) {
 		$this->site_path = $site_path;
-		$this->is_admin  = $is_admin;
 	}
 
 	/**
@@ -56,10 +54,6 @@ class Site {
 	 */
 	public function get_site_options():array {
 		$default_options = [];
-
-		if ( $this->is_admin ) {
-			return $default_options;
-		}
 
 		$absolute_site_config_file = $this->site_path . self::SITE_CONF_FILE;
 
