@@ -1,9 +1,9 @@
 <?php
 
-namespace techPump\Loaders;
+namespace techPump\Framework\Loaders;
 
-use techPump\Pages\Page;
-use techPump\Pages\SitePage;
+use techPump\Framework\Pages\Page;
+use techPump\Framework\Pages\SitePage;
 
 /**
  * Class Site. Front controller

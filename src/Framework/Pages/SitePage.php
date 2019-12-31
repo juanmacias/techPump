@@ -1,6 +1,6 @@
 <?php
 
-namespace techPump\Pages;
+namespace techPump\Framework\Pages;
 
 /**
  * Class SitePage. A template page.

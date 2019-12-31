@@ -1,6 +1,6 @@
 <?php
 
-namespace techPump\Loaders;
+namespace techPump\Framework\Loaders;
 
 /**
  * Class ClassPreloader. Preload classes for PHP 7.4
@@ -50,10 +50,10 @@ class ClassPreloader {
 	 * @return string
 	 */
 	private function transformClassNameToFileName( string $class_name ):string {
-		$class_name_with_vendor = str_replace( self::VENDOR_PREFIX, '', $class_name );
+		$class_name_with_vendor = \substr_replace( $class_name, '', 0, strlen(self::VENDOR_PREFIX)  );
 		$class_file             = str_replace( '\\', '/', $class_name_with_vendor );
 
-		return $this->base_dir . $class_file . '.php';
+		return $this->base_dir . '/' . $class_file . '.php';
 	}
 
 	/**
