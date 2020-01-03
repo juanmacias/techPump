@@ -1,6 +1,6 @@
 <div class="box-header">
    <div class="header">
-      <h1 class="logo-sitio"><a href="#" title="Cerdas.com">Cerdas.com</a></h1>
+      <h1 class="logo-sitio"><a href="#" title="Cerdas.com"><?= $this->site->get('name') ?></a></h1>
       <div class="tit-webcams">Webcams</div>
 
       <div class="logo-cum"><a href="#" title="Cumlouder.com">Cumlouder.com</a></div>

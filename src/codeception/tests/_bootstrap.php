@@ -2,6 +2,6 @@
 
 use Codeception\Util\Autoload;
 
-$framework_path = realpath( __DIR__.'/../../framework');
+$framework_path = dirname( __DIR__, 2 );
 
-Autoload::addNamespace('techPump', $framework_path.'');
+Autoload::addNamespace( 'techPump', $framework_path . '' );

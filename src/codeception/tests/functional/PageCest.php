@@ -1,6 +1,6 @@
 <?php namespace techPump;
 
-use techPump\Pages\SitePage;
+use techPump\Apps\Sites\Pages\SitePage;
 
 class PageCest {
 

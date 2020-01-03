@@ -12,7 +12,7 @@ namespace techPump\Framework\Pages;
 abstract class Page {
 
 	protected $templates_path;
-	protected $options;
+	protected $vars = [];
 
 	protected const PARTS = [
 		'head',
@@ -26,10 +26,10 @@ abstract class Page {
 	 *
 	 * @param string $templates_path Absolute path to templates
 	 */
-	public function __construct( string $templates_path = '' ) {
-		$templates_path = $templates_path ?: dirname( __DIR__, 2 ) . '/templates';
-
+	public function __construct( string $templates_path ) {
 		$this->templates_path = $templates_path;
+
+		$this->commons();
 	}
 
 	/**
@@ -37,44 +37,64 @@ abstract class Page {
 	 *
 	 * @return string
 	 */
-	abstract protected function head():string;
+	abstract protected function head(): string;
 
 	/**
 	 * Return top of webpage.
 	 *
 	 * @return string
 	 */
-	abstract protected function top():string;
-
-	/**
-	 * Show a page
-	 *
-	 * @param array options vars which can be used in templates
-	 *
-	 * @return void
-	 */
-	final public function show(array $options = []):void {
-		$this->options = $options;
-
-		foreach ( self::PARTS as $part ) {
-			echo $this->$part();
-			\flush();
-		}
-	}
+	abstract protected function top(): string;
 
 	/**
 	 * Return main of webpage.
 	 *
 	 * @return string
 	 */
-	abstract protected function main():string;
+	abstract protected function main(): string;
 
 	/**
 	 * Return boottom of webpage.
 	 *
 	 * @return string
 	 */
-	abstract protected function bottom():string;
+	abstract protected function bottom(): string;
+
+	/**
+	 * Commons tasks after page is created but before page is displayed .
+	 *
+	 * @return void
+	 */
+	protected function commons(): void {
+		return;
+	}
+
+	/**
+	 * Commons task after page is displayed.
+	 *
+	 * @return void
+	 */
+	protected function down(): void {
+		return;
+	}
+
+	/**
+	 * Show a page
+	 *
+	 * @param array vars Vars which can be used in templates
+	 *
+	 * @return void
+	 */
+	final public function show( array $vars = [] ): void {
+		$this->vars = $vars + $this->vars;
+
+		foreach ( self::PARTS as $part ) {
+			echo $this->$part();
+			\flush();
+		}
+
+		$this->down();
+	}
 
 	/**
 	 * Helper: Render a site file
@@ -83,10 +103,8 @@ abstract class Page {
 	 *
 	 * @return string Output of render.
 	 */
-	final protected function render( string $template ):string {
-		$template_file = $this->getTemplateAbsolutePath( $template );
-
-		if ( ! \file_exists( $template_file ) ) {
+	final protected function render( string $template_file ): string {
+		if ( !\file_exists( $template_file ) ) {
 			error_log( "Not found template file: {$template_file}" );
 
 			return '';
@@ -107,7 +125,7 @@ abstract class Page {
 	 *
 	 * @return string Absolute path from root of filesystem.
 	 */
-	final protected function getTemplateAbsolutePath( string $template_file ):string {
+	final protected function getTemplateAbsolutePath( string $template_file ): string {
 		$template_file = ltrim( $template_file, '/' );
 		$template_file = str_replace( '.php', '', $template_file ) . '.php';
 
@@ -117,13 +135,23 @@ abstract class Page {
 	}
 
 	/**
+	 * Add a variable in order to can be used in pages
+	 *
+	 * @param string $var_name
+	 * @param mixed  $var_value
+	 */
+	final public function addVar( string $var_name, $var_value ): void {
+		$this->vars[ $var_name ] = $var_value;
+	}
+
+	/**
 	 * Magic method
 	 *
-	 * @param string $option_name
+	 * @param string $var_name
 	 *
 	 * @return string
 	 */
-	final public function __get( string $option_name ){
-		return $this->options[ $option_name ] ?? '';
+	final public function __get( string $var_name ) {
+		return $this->vars[ $var_name ] ?? '';
 	}
 }

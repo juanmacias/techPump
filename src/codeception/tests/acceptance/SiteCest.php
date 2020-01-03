@@ -16,7 +16,7 @@ class SiteCest {
 	}
 
 	public function topIsRightTest( AcceptanceTester $I ) {
-		$I->canSeeLink( 'Cerdas.com' );
+		$I->canSeeLink( 'Cerdas' );
 		$I->canSee( 'Acceso a las Chicas en Directo', '.header' );
 	}
 

@@ -1,5 +1,5 @@
 <?php
 
-use techPump\Loaders\Site;
+define('__TECH_PUMP_SITE__', __DIR__);
 
-( new Site( __DIR__ ) )->load();
+include '../bootstrap.php';
