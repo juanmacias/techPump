@@ -6,7 +6,7 @@
    <title><?= $this->site->get('name') ?></title>
 
    <!-- Star CSS and Javascript -->
-   <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen,projection">
+   <link rel="stylesheet" href="http://cdn.techpump.local:8080/css/reset.min.css" type="text/css" media="screen,projection">
    <link rel="stylesheet" href="css/estilos.css" type="text/css" media="screen,projection">
    <!-- end CSS and Javascript -->
 </head>
