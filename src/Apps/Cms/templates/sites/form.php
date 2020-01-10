@@ -56,17 +56,6 @@
                               </div>
                            </div>
 
-                           <div class="form-group  row">
-                              <label for="css_code" class="col-sm-2 control-label">CSS Code</label>
-
-                              <div class="col-sm-10">
-                                 <textarea class="form-control" name="site_form[css]" id="css_code"><?= $this->site->getCss(); ?></textarea>
-                                 <p class="help-block">You can use <a href="https://leafo.net/lessphp/docs/" target="_blank">Less</a> syntax in CSS code.
-                                    We also recommend use <a href="http://getbem.com/introduction/" target="_blank">BEM CSS</a> notation.</p>
-                              </div>
-                           </div>
-
-
                         <!-- /.box-body -->
                         <div class="box-footer">
                            <button type="submit" class="btn btn-default" formaction="/">Cancel</button>

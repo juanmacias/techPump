@@ -114,25 +114,4 @@ final class Site {
 	public function get( string $field_name ) {
 		return $this->$field_name ?? '';
 	}
-
-	/**
-	 * Retrieve css file from site
-	 *
-	 * @return string
-	 */
-	public function getCss(): string {
-		$default_css_code = '';
-
-		if ( !$this->exists() ) {
-			return $default_css_code;
-		}
-
-		$css_file = $this->path . '/css/estilos.css';
-
-		if ( !\file_exists( $css_file ) ) {
-			return $default_css_code;
-		}
-
-		return \file_get_contents( $css_file ) ?: $default_css_code;
-	}
 }
