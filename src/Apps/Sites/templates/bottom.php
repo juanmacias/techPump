@@ -25,5 +25,6 @@
 </div>
 <!-- termina DATA -->
 
+<script src="http://cdn.techpump.local:8080/js/scripts.min.js"></script>
 </body>
 </html>
