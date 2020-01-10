@@ -30,10 +30,10 @@ body{
 	
 .header{ width:903px; margin:0 auto;}
 
-	.header h1{ background:url("images/logo-sitio.png"); display:block; float:left; width:148px; height:41px;}
+	.header h1{ background:url("http://cdn.techpump.local:8080/css/images/logo-sitio.png"); display:block; float:left; width:148px; height:41px;}
 	.header h1 a{ display:block; width:148px; height:41px; text-indent:-9999px;}
 
-	.header .tit-webcams{ background:url("images/webcams.png"); display:block; float:left; width:125px; height:41px; text-indent:-9999px;}
+	.header .tit-webcams{ background:url("http://cdn.techpump.local:8080/css/images/webcams.png"); display:block; float:left; width:125px; height:41px; text-indent:-9999px;}
 
 	.header .menu{ float:right; font-size:11px; font-weight:bold; line-height:40px; margin:0 12px 0 0; color:#FFF;}
 	.header .menu a{ 
@@ -47,7 +47,7 @@ body{
 		}
 	.header .menu a:hover{ text-decoration:underline; } 
 
-	.header .logo-cum{ background:url("images/logo-cumlouder.png"); display:block; float:right; width:120px; height:41px; text-indent:-9999px;}
+	.header .logo-cum{ background:url("http://cdn.techpump.local:8080/css/images/logo-cumlouder.png"); display:block; float:right; width:120px; height:41px; text-indent:-9999px;}
 	.header .logo-cum a{ display:block; width:120px; height:41px; text-indent:-9999px;}
 
 /* LISTADO CHICAS */
@@ -62,7 +62,7 @@ body{
 	
 		/* Nombre chica */
 		.chica .nombre-chica{ 
-			opacity: 0.0; display:block; background:url("images/bg-nombre-chica.png"); position:absolute; bottom:-21px; left:0; width:165px; height:20px; padding:0 5px;
+			opacity: 0.0; display:block; background:url("http://cdn.techpump.local:8080/css/images/bg-nombre-chica.png"); position:absolute; bottom:-21px; left:0; width:165px; height:20px; padding:0 5px;
 			font-size:10px; text-transform:uppercase; color:#FFF; font-family:"Tahoma", Arial, Helvetica, sans-serif; line-height:19px;
 			-moz-transition: all 0.26s ease-out 0s; -o-transition: all 0.26s ease-out 0s; -ms-transition: all 0.26s ease-out 0s; -webkit-transition: all 0.26s ease-out 0s; transition: all 0.26s ease-out 0s; 
 			}
@@ -73,26 +73,26 @@ body{
 		
 		.chica .nombre-chica-fijo{ padding:0 5px 0 25px; width:145px; }
 
-		.chica .nombre-chica span.ico-online{ display:block; background:url("images/ico-online.png"); width:16px; height:16px; float:left; margin:2px 3px 0 0;}
+		.chica .nombre-chica span.ico-online{ display:block; background:url("http://cdn.techpump.local:8080/css/images/ico-online.png"); width:16px; height:16px; float:left; margin:2px 3px 0 0;}
 		
 		/* Icono corazon */
 		.chica a.link .ico-favorito{
-			opacity: 0.0; display:block; background:url("images/ico-corazon.png") left top no-repeat; width:18px; height:17px; text-indent:-9999px; position:absolute; top:-20px; right:5px;
+			opacity: 0.0; display:block; background:url("http://cdn.techpump.local:8080/css/images/ico-corazon.png") left top no-repeat; width:18px; height:17px; text-indent:-9999px; position:absolute; top:-20px; right:5px;
 			-moz-transition: all 0.26s ease-out 0s; -o-transition: all 0.26s ease-out 0s; -ms-transition: all 0.26s ease-out 0s; -webkit-transition: all 0.26s ease-out 0s; transition: all 0.26s ease-out 0s;
 			}
 	
 		.chica a.link:hover .ico-favorito{
-			opacity: 1.0; display:block; background:url("images/ico-corazon.png") left top no-repeat; width:18px; height:17px; text-indent:-9999px; position:absolute; top:4px; right:5px;
+			opacity: 1.0; display:block; background:url("http://cdn.techpump.local:8080/css/images/ico-corazon.png") left top no-repeat; width:18px; height:17px; text-indent:-9999px; position:absolute; top:4px; right:5px;
 			-moz-transition: all 0.26s ease-out 0s; -o-transition: all 0.26s ease-out 0s; -ms-transition: all 0.26s ease-out 0s; -webkit-transition: all 0.26s ease-out 0s; transition: all 0.26s ease-out 0s;
 			}
 		
 		.chica a.link:hover .ico-favorito:hover{
-			 opacity: 1.0; display:block; background:url("images/ico-corazon.png") left bottom no-repeat;
+			 opacity: 1.0; display:block; background:url("http://cdn.techpump.local:8080/css/images/ico-corazon.png") left bottom no-repeat;
 			 -moz-transition: all 0.26s ease-out 0s; -o-transition: all 0.26s ease-out 0s; -ms-transition: all 0.26s ease-out 0s; -webkit-transition: all 0.26s ease-out 0s; transition: all 0.26s ease-out 0s;
 			 }
 		
 		/**/
-		.chica .ico-online-fijo{ display:block; background:url("images/ico-online.png"); width:16px; height:16px; position:absolute; bottom:2px; left:5px;} 
+		.chica .ico-online-fijo{ display:block; background:url("http://cdn.techpump.local:8080/css/images/ico-online.png"); width:16px; height:16px; position:absolute; bottom:2px; left:5px;} 
 		 	
 /**/
 .chica-grande{ width:357px; height:307px;}
@@ -105,7 +105,7 @@ body{
 
 /**/
 .btn-mas-modelos{ 
-	display:block; background:url("images/btn-mas-modelos.png") left top no-repeat; width:195px; height:46px; margin:20px auto;
+	display:block; background:url("http://cdn.techpump.local:8080/css/images/btn-mas-modelos.png") left top no-repeat; width:195px; height:46px; margin:20px auto;
 	font-size:14px; color:#FFF; text-decoration:none; text-align:center; line-height:44px;
 
 	-moz-text-shadow: 0px 1px 0px #E94400;
