@@ -23,12 +23,22 @@ class Request {
 	/**
 	 * Retrieve a request data according to field name
 	 *
-	 * @param string $field_name Field of request.
+	 * @param string $field_name    Field of request.
+	 * @param mixed  $default_value Default value when field name doesn't exist.
 	 *
 	 * @return mixed|string
 	 */
-	public function get( $field_name ) {
-		return $this->data[ $field_name ]??'';
+	public function get( string $field_name, $default_value = '' ) {
+		return $this->data[ $field_name ] ?? $default_value;
+	}
+
+	/**
+	 * Retrieve site param from request.
+	 *
+	 * @return string
+	 */
+	public function getRequestedSite(): string {
+		return $this->get( 'site', '-' );
 	}
 
 	/**
@@ -36,8 +46,8 @@ class Request {
 	 *
 	 * @return int
 	 */
-	public function get_current_num_page():int {
-		$current_page = intval( $this->data[ 'page' ]??0 );
+	public function getCurrentNumPage(): int {
+		$current_page = intval( $this->data[ 'page' ] ?? 0 );
 
 		return $current_page ?: 1;
 	}

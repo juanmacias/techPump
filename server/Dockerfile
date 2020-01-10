@@ -7,14 +7,8 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 RUN docker-php-ext-install opcache
 
 # Install basic tools
-
 RUN apt-get update && apt-get install -y wget
 RUN apt-get install -y vim git
 
-# Install composer
-
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer creates=/usr/local/bin/composer
-
 # Install apache modules
-
-RUN a2enmod rewrite vhost_alias  && service apache2 restart
+RUN a2enmod rewrite vhost_alias expires && service apache2 restart

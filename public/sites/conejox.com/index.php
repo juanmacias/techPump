@@ -1,5 +1,5 @@
 <?php
 
-define('__TECH_PUMP_SITE__', __DIR__);
+define( '__TECH_PUMP_SITE__', basename( __DIR__ ) );
 
-include '../bootstrap.php';
+include __DIR__ . '/../bootstrap.php';

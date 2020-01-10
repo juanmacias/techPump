@@ -31,7 +31,7 @@ class ClassPreloader {
 	 *
 	 * @return void
 	 */
-	public function load( array $classes_list ) {
+	public function load( array $classes_list ): void {
 		foreach ( $classes_list as $class_name ) {
 			if ( \class_exists( $class_name ) ) {
 				continue;
@@ -50,7 +50,7 @@ class ClassPreloader {
 	 * @return string
 	 */
 	private function transformClassNameToFileName( string $class_name ):string {
-		$class_name_with_vendor = \substr_replace( $class_name, '', 0, strlen(self::VENDOR_PREFIX)  );
+		$class_name_with_vendor = \substr_replace( $class_name, '', 0, strlen( self::VENDOR_PREFIX ) );
 		$class_file             = str_replace( '\\', '/', $class_name_with_vendor );
 
 		return $this->base_dir . '/' . $class_file . '.php';

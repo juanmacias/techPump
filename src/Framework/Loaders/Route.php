@@ -2,8 +2,8 @@
 
 namespace techPump\Framework\Loaders;
 
+use techPump\Domain\Entities\Site;
 use techPump\Framework\Controllers\Controller;
-use techPump\Framework\Entities\Site;
 use techPump\Framework\Http\Request;
 
 /**
@@ -24,9 +24,9 @@ class Route {
 	/**
 	 * Route constructor.
 	 *
-	 * @param string    $app_namespace Namespace of current app
-	 * @param Request   $request       Request from navigator
-	 * @param Site|null $site          Current site object
+	 * @param string                              $app_namespace Namespace of current app
+	 * @param Request                             $request       Request from navigator
+	 * @param \techPump\Domain\Entities\Site|null $site          Current site object
 	 */
 	public function __construct( string $app_namespace, Request $request, ?Site $site ) {
 		$this->request              = $request;

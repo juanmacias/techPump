@@ -2,7 +2,7 @@
 
 namespace techPump\Framework\Controllers;
 
-use techPump\Framework\Entities\Site;
+use techPump\Domain\Entities\Site;
 use techPump\Framework\Http\Request;
 use techPump\Framework\Pages\Page;
 

@@ -1,6 +1,6 @@
 <?php namespace techPump;
 
-use techPump\Apps\Sites\Pages\SitePage;
+use techPump\Framework\Pages\AppPage;
 
 class PageCest {
 
@@ -8,7 +8,7 @@ class PageCest {
 
 	function _before( AcceptanceTester $I ) {
 		$template_path = __DIR__ . '/page_templates';
-		$this->page    = new SitePage( $template_path );
+		$this->page    = new AppPage( $template_path );
 	}
 
 	public function PageCanBeCreatedTest( FunctionalTester $I ) {

@@ -21,7 +21,7 @@ in your favorite navigator.
 
 ## Running tests
 
-From `app/codeception`( or `/var/www/html/app/codeception` inside of container ) run:
+From `src/codeception`( or `/var/www/html/src/codeception` inside of container ) run:
 
 ```shell
 php ../vendor/bin/codecept run --steps -d
