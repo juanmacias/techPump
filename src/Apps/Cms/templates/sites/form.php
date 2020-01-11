@@ -21,7 +21,8 @@
                               <label for="name" class="col-sm-2 control-label">Name</label>
 
                               <div class="col-sm-10">
-                                 <input value="<?= $this->site->get('name') ?>" class="form-control" name="site_form[name]" id="name" placeholder="Name of site. E.g: Cerdas" type="text" minlength="3" maxlength="75">
+                                 <input value="<?= $this->site->get('name') ?>" class="form-control" name="site_form[name]" id="name"
+                                        placeholder="Name of site. E.g: Cerdas" type="text " required="required" minlength="3" maxlength="75">
                               </div>
                            </div>
 
@@ -30,7 +31,9 @@
                                     <label for="url" class="col-sm-2 control-label">Url</label>
 
                                     <div class="col-sm-10">
-                                       <input value="http://<?= $this->site->get('domain') ?>" class="form-control" name="site_form[url]" id="url" placeholder="Url of site. E.g: http://cerdas.com" type="url" minlength="8" maxlength="75" <?php if( $this->site->exists() ): ?>disabled="disabled" <?php endif; ?>>
+                                       <input value="http://<?= $this->site->get('domain') ?>" class="form-control" name="site_form[url]" id="url"
+                                              placeholder="Url of site. E.g: http://cerdas.com" type="url" required="required" minlength="8" maxlength="50"
+                                              <?php if( $this->site->exists() ): ?>disabled="disabled" <?php endif; ?>>
                                     </div>
                                  </div>
                                  <input type="hidden" name="site_form[domain]" value="http://<?= $this->site->get('domain') ?>" />
@@ -39,7 +42,8 @@
                                  <label for="url" class="col-sm-2 control-label">Url</label>
 
                                  <div class="col-sm-10">
-                                    <input value="http://<?= $this->site->get('domain') ?>" class="form-control" name="site_form[domain]" id="url" placeholder="Url of site. E.g: http://cerdas.com" type="url" minlength="8" maxlength="75">
+                                    <input value="http://<?= $this->site->get('domain') ?>" class="form-control" name="site_form[domain]" id="url"
+                                           placeholder="Url of site. E.g: http://cerdas.com" type="url" required="required"  minlength="8" maxlength="50">
                                  </div>
                               </div>
                            <?php endif; ?>
@@ -48,7 +52,8 @@
                               <label for="nats" class="col-sm-2 control-label">NATS</label>
 
                               <div class="col-sm-10">
-                                 <input value="<?= $this->site->get('nats') ?>" class="form-control" name="site_form[nats]" id="nats" placeholder="NATS code. E.g: MjYwNS4xLjIuMi4wLjAuMC4wLjA" type="text" minlength="3" maxlength="75">
+                                 <input value="<?= $this->site->get('nats') ?>" class="form-control" name="site_form[nats]" id="nats"
+                                        placeholder="NATS code. E.g: MjYwNS4xLjIuMi4wLjAuMC4wLjA" type="text" required="required" pattern="[A-Za-z0-9]{3,35}" minlength="3" maxlength="35">
                               </div>
                            </div>
 
@@ -56,7 +61,8 @@
                               <label for="nats_webcams" class="col-sm-2 control-label">NATS webcam</label>
 
                               <div class="col-sm-10">
-                                 <input value="<?= $this->site->get('nats_webcams') ?>" class="form-control" name="site_form[nats_webcams]" id="nats_webcams" placeholder="NATs code for webcams. E.g: MjYwNS4xLjIuMi4wLjAuMC4wLjA" type="text" minlength="3" maxlength="75">
+                                 <input value="<?= $this->site->get('nats_webcams') ?>" class="form-control" name="site_form[nats_webcams]" id="nats_webcams"
+                                        placeholder="NATs code for webcams. E.g: MjYwNS4xLjIuMi4wLjAuMC4wLjA" type="text" required="required" pattern="[A-Za-z0-9]{3,35}" minlength="3" maxlength="35">
                               </div>
                            </div>
 
@@ -64,7 +70,8 @@
                               <label for="analytics" class="col-sm-2 control-label">Analytics</label>
 
                               <div class="col-sm-10">
-                                 <input value="<?= $this->site->get('analytics') ?>" class="form-control" name="site_form[analytics]" id="analytics" placeholder="Analytics code. E.g: UA-26020144-23" type="text" minlength="3" maxlength="75">
+                                 <input value="<?= $this->site->get('analytics') ?>" class="form-control" name="site_form[analytics]" id="analytics"
+                                        placeholder="Analytics code. E.g: UA-26020144-23" type="text" minlength="3" maxlength="75" required="required" pattern="UA-[A-Za-z0-9]{3,9}-[A-Za-z0-9]{1,3}">
                               </div>
                            </div>
 
