@@ -2,7 +2,7 @@
 
 namespace techPump\Framework\Controllers;
 
-use techPump\Domain\Entities\Site;
+use techPump\Domain\Sites\Site;
 use techPump\Framework\Http\Request;
 use techPump\Framework\Pages\Page;
 
@@ -34,5 +34,5 @@ abstract class Controller {
 		$this->templates_path = $templates_path ?: dirname( $current_class->getFileName(), 2 ) . '/templates';
 	}
 
-	abstract public function get_page(): Page;
+	abstract public function getPage(): Page;
 }

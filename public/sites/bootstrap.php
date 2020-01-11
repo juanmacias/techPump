@@ -5,7 +5,7 @@
 
 namespace techPump\Apps\Sites;
 
-use techPump\Domain\Repositories\SitesStore;
+use techPump\Domain\Sites\SitesStore;
 use techPump\Framework\Http\Request;
 use techPump\Framework\Loaders\Route;
 
@@ -19,5 +19,5 @@ $request = new Request( $_REQUEST );
 $route      = new Route( App::NAMESPACE, $request, $site );
 $controller = $route->getController();
 
-$page = $controller->get_page();
+$page = $controller->getPage();
 $page->show();

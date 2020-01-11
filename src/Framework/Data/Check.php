@@ -39,6 +39,18 @@ class Check {
 	}
 
 	/**
+	 * Check if a value is a relevant information string( like name, surnames, etc ).
+	 * This value must have three characters at least and can have letters with accents
+	 */
+	static public function information( $text, string $default = '', $others = '' ): string {
+		if ( isset( $text ) && preg_match( '/^[A-Za-z0-9À-ÿ\.\-\s' . $others . ']{3,}/i', $text ) ) {
+			return $text;
+		}
+
+		return $default;
+	}
+
+	/**
 	 * Check if a value is a valid analytics code.
 	 *
 	 * @param mixed  $maybe_analytics_code Value to check.
@@ -47,14 +59,15 @@ class Check {
 	 * @return string
 	 */
 	static public function analytics( $maybe_analytics_code, string $default = '' ): string {
-		$maybe_analytics_code = self::key( $maybe_analytics_code, $default );
+		$maybe_analytics_code = self::key( $maybe_analytics_code, $default, '\-' );
 
 		if ( empty( $maybe_analytics_code ) ) {
 			return $default;
 		}
 
 		$code = sscanf( $maybe_analytics_code, "UA-%d-%d" );
-		if ( empty( $code[ 0 ] ) || !empty( $code[ 1 ] ) ) {
+
+		if ( empty( $code[ 0 ] ) || empty( $code[ 1 ] ) ) {
 			return $default;
 		}
 

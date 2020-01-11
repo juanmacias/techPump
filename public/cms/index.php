@@ -5,7 +5,7 @@
 
 namespace techPump\Apps\Cms;
 
-use techPump\Domain\Repositories\SitesStore;
+use techPump\Domain\Sites\SitesStore;
 use techPump\Framework\Http\Auth;
 use techPump\Framework\Http\Request;
 use techPump\Framework\Loaders\Route;
@@ -21,5 +21,5 @@ $site    = ( new SitesStore() )->getSite( $request->getRequestedSite() );
 $route      = new Route( App::NAMESPACE, $request, $site );
 $controller = $route->getController();
 
-$page = $controller->get_page();
+$page = $controller->getPage();
 $page->show();

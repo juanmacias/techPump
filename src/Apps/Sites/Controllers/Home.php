@@ -8,7 +8,7 @@ use techPump\Framework\Pages\Page;
 
 class Home extends Controller {
 
-	final public function get_page(): Page {
+	final public function getPage(): Page {
 		$home_page = new AppPage( $this->templates_path );
 		$home_page->addVar( 'site', $this->site );
 

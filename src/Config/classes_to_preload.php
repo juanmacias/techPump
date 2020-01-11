@@ -14,11 +14,12 @@ return [
 	\techPump\Framework\Data\Check::class,
 
 	/**
-	 * Domain
+	 * Domain. Site module.
 	 */
-	\techPump\Domain\Entities\Site::class,
-	\techPump\Domain\Collections\Sites::class,
-	\techPump\Domain\Repositories\SitesStore::class,
+	\techPump\Domain\Sites\Site::class,
+	\techPump\Domain\Sites\Sites::class,
+	\techPump\Domain\Sites\SitesStore::class,
+	\techPump\Domain\Sites\SiteBuilder::class,
 
 	/**
 	 * Sites
@@ -33,5 +34,6 @@ return [
 	\techPump\Apps\Cms\Controllers\Home::class,
 	\techPump\Apps\Cms\Controllers\Edit::class,
 	\techPump\Apps\Cms\Controllers\Add::class,
+	\techPump\Apps\Cms\Controllers\Save::class,
 	\techPump\Apps\Cms\Pages\AdminPage::class,
 ];

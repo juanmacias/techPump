@@ -13,7 +13,7 @@ use techPump\Framework\Pages\Page;
  */
 class Add extends Controller {
 
-	final public function get_page( ):Page {
+	final public function getPage( ):Page {
 		$site_form = new AdminPage( $this->templates_path );
 		$site_form->setMainPage( 'sites/form');
 		$site_form->addVar( 'site', $this->site );
