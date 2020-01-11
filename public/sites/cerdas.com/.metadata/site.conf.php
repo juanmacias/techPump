@@ -1,10 +1,8 @@
 <?php
 
-return [
-	'name' => 'Cerdas',
-	//'url'  => '' not needed
-	'nats' => 'MjYwNS4xLjIuMi4wLjAuMC4wLjA',
-	'nats_webcams' => 'MjYwNS4xLjI1LjQzLjAuMC4wLjAuMA',
-	//'css'  => '' not needed
-	'analytics' => 'UA-26020144-23',
-];
+return array (
+  'name' => 'Cerdas',
+  'nats' => 'MjYwNS4xLjIuMi4wLjAuMC4wLjA22',
+  'nats_webcams' => 'MjYwNS4xLjI1LjQzLjAuMC4wLjAuMA22',
+  'analytics' => 'UA-26020144-22',
+);

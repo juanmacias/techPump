@@ -14,7 +14,7 @@
 						<div class="alert alert-success">
 							<h4><i class="icon fa fa-check"></i> Site saved!</h4>
 					<?php else: ?>
-							<div class="alert alert-dangere">
+							<div class="alert alert-danger">
 								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 								<h4><i class="icon fa fa-ban"></i> Site error!</h4>
 					<?php endif; ?>

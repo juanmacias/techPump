@@ -39,11 +39,11 @@ class SitesStore {
 	 * @param Site $site
 	 */
 	public function update( Site $site ): bool {
-		if ( !$site->exists() ) {
+		if ( !$site->exists() || !\is_writable( $site->getFileConfigPath() ) ) {
 			return false;
 		}
 
-		$site_data = $this->generateMetadata( $site );
+		$site_data             = $this->generateMetadata( $site );
 		$site_metadata_file    = $site->getFileConfigPath();
 		$site_metadata_content = $this->generateMetadataContent( $site_data );
 
@@ -57,12 +57,12 @@ class SitesStore {
 	 *
 	 * @return array
 	 */
-	protected function generateMetadata(Site $site): array {
+	protected function generateMetadata( Site $site ): array {
 		$site_data = $site->export();
 
 		//Remove unnecessary data
-		unset($site_data['path']);
-		unset($site_data['domain']);
+		unset( $site_data[ 'path' ] );
+		unset( $site_data[ 'domain' ] );
 
 		return $site_data;
 	}

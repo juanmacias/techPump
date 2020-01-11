@@ -23,7 +23,13 @@ class Save extends Controller {
 		$notices = [];
 		if( $this->site->exists() ) {
 			$site = new Site( $site_form_data );
-			( new SitesStore() )->update( $site );
+			$updated = ( new SitesStore() )->update( $site );
+			$type = $updated?  'succesfull' : 'error';
+			$notices[$type] = true;
+
+			if('error' === $type){
+				$notices['msg'][] = "You don't have permissions in config file";
+			}
 		}else {
 			$site_builder = new SiteBuilder( $site_form_data  );
 			$site = $site_builder->create();
