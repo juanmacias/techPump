@@ -6,7 +6,6 @@ use techPump\Framework\Pages\AppPage;
 
 class AdminPage extends AppPage {
 	private const PLUGINS_PATH = '/plugins/';
-	private const CODEMIRROR_PATH = self::PLUGINS_PATH.'codemirror/';
 
 	/**
 	 * Load commons css files
@@ -68,11 +67,6 @@ class AdminPage extends AppPage {
 	 * @return void
 	 */
 	public function loadAssetsForForm(): void {
-		$this->addCss( self::CODEMIRROR_PATH.'lib/codemirror.css' );
-		$this->addCss( '/css/form.css');
 
-		$this->addJs( self::CODEMIRROR_PATH.'lib/codemirror.js');
-		$this->addJs( self::CODEMIRROR_PATH.'mode/css/css.js');
-		$this->addJs( '/js/form.js');
 	}
 }

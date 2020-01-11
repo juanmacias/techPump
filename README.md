@@ -2,7 +2,9 @@
 
 ## Requirements
 
-Add `127.0.0.1   sites.techpump.local` line in your `/etc/hosts` file. This is site for manage sites.
+Add `127.0.0.1   sites.techpump.local` line in your `/etc/hosts` file. This is for manage sites.
+
+Add `127.0.0.1   cdn.techpump.local` line in your `/etc/hosts` file. This is for cdn of public sites.
 
 Add `127.0.0.1   cerdas.com` line in your `/etc/hosts` file. This is demo site.
 

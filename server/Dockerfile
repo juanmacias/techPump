@@ -11,4 +11,4 @@ RUN apt-get update && apt-get install -y wget
 RUN apt-get install -y vim git
 
 # Install apache modules
-RUN a2enmod rewrite vhost_alias expires && service apache2 restart
+RUN a2enmod rewrite vhost_alias expires headers setenvif && service apache2 restart

@@ -1,5 +1,5 @@
 127.0.0.1	localhost
-127.0.0.1   sites.techpump.local cerdas.com
+127.0.0.1   sites.techpump.local cdn.techpump.local cerdas.com
 
 ::1	localhost ip6-localhost ip6-loopback
 
