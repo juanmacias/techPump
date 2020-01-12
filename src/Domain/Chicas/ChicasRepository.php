@@ -11,7 +11,7 @@ use techPump\Config\Config;
  */
 class ChicasRepository {
 
-	private const ENDPOINT = 'http://webcams.cumlouder.com/feed/webcams/online/61/%d/';
+	private const ENDPOINT = 'https://webcams.cumlouder.com/feed/webcams/online/61/%d/';
 
 	private $page;
 

@@ -13,7 +13,7 @@ final class Config {
 
 	/** @var int how many photos between two big photos( included last ) */
 	public const OUTSTANDING_CHICAS_INTERVAL = 12;
-	public const WEBCAMS_LINK = 'http://webcams.cumlouder.com/joinmb/cumlouder/%s';
+	public const WEBCAMS_LINK = 'https://webcams.cumlouder.com/joinmb/cumlouder/%s';
 	public const IMAGES_URL = 'https://w0.imgcm.com/modelos/%s';
 
 	public const CDN_URL = 'http://cdn.techpump.local:8080/%s';
