@@ -12,7 +12,7 @@ final class Config {
 	public const ADMIN_PASSWD = 'techpump';
 
 	/** @var int how many photos between two big photos( included last ) */
-	public const OUTGOING_CHICAS_INTERVAL = 12;
+	public const OUTSTANDING_CHICAS_INTERVAL = 12;
 	public const WEBCAMS_LINK = 'http://webcams.cumlouder.com/joinmb/cumlouder/%s';
 	public const IMAGES_URL = 'https://w0.imgcm.com/modelos/%s';
 

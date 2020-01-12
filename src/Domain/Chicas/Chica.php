@@ -42,12 +42,12 @@ class Chica {
 	}
 
 	/**
-	 * Retrieve if chica is outgoing or not.
+	 * Retrieve if chica is outstanding or not.
 	 *
 	 * @return bool
 	 */
-	public function isOutgoing(): bool {
-		return boolval( $this->data[ 'outgoing' ] ?? false );
+	public function isOutstanding(): bool {
+		return boolval( $this->data[ 'outstanding' ] ?? false );
 	}
 
 	/**
@@ -65,7 +65,7 @@ class Chica {
 	 * @return string
 	 */
 	public function getImage(): string {
-		if ( $this->isOutgoing() ) {
+		if ( $this->isOutstanding() ) {
 			return $this->get( 'Thumb4' );
 		}
 
@@ -89,14 +89,14 @@ class Chica {
 	public function getTags(): string {
 		$tags = 'chica';
 
-		if ( !$this->isOutgoing() ) {
+		if ( !$this->isOutstanding() ) {
 			return $tags;
 		}
 
 		$tags .= ' chica-grande';
 
-		$position_of_outgoing = ceil( $this->position / Config::OUTGOING_CHICAS_INTERVAL );
-		$is_odd               = $position_of_outgoing % 2;
+		$position_of_outstanding = ceil( $this->position / Config::OUTSTANDING_CHICAS_INTERVAL );
+		$is_odd               = $position_of_outstanding % 2;
 
 		if ( !$is_odd ) {
 			$tags .= ' grande-derecha';

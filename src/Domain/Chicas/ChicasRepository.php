@@ -36,9 +36,9 @@ class ChicasRepository {
 			return new Chicas( [] );
 		}
 
-		$outgoings = $this->getOutgoings();
+		$outstandings = $this->getOutstandings();
 
-		$chicas_list = $this->addOutgoingsInTheirPlace($chicas_list, $outgoings);
+		$chicas_list = $this->addOutstandingsInTheirPlace($chicas_list, $outstandings);
 
 		//Remove first girl. According specification
 		array_shift( $chicas_list );
@@ -47,16 +47,16 @@ class ChicasRepository {
 	}
 
 	/**
-	 * Helper, add a outgoing chica each {OUTGOING_CHICAS_INTERVAL} chicas.
+	 * Helper, add a outstanding chica each {OUTSTANDING_CHICAS_INTERVAL} chicas.
 	 *
 	 * @param $chicas_list
-	 * @param $outgoings
+	 * @param $outstandings
 	 */
-	private function addOutgoingsInTheirPlace($chicas_list, $outgoings): array {
+	private function addOutstandingsInTheirPlace($chicas_list, $outstandings): array {
 		//-1 because of photo removed after
 		$position             = - 1;
-		$foto_grande_position = Config::OUTGOING_CHICAS_INTERVAL;
-		foreach ( $outgoings as $outgoing ) {
+		$foto_grande_position = Config::OUTSTANDING_CHICAS_INTERVAL;
+		foreach ( $outstandings as $outstanding ) {
 			$position += $foto_grande_position;
 
 			//end when there aren't more chicas.
@@ -64,18 +64,18 @@ class ChicasRepository {
 				break;
 			}
 
-			\array_splice( $chicas_list, $position, 0, [ $outgoing ] );
+			\array_splice( $chicas_list, $position, 0, [ $outstanding ] );
 		}
 
 		return $chicas_list;
 	}
 
 	/**
-	 * Retrieve outgoing chicas for current page.
+	 * Retrieve outstanding chicas for current page.
 	 *
 	 * @return array
 	 */
-	public function getOutgoings() {
+	public function getOutstandings() {
 		static $chicas;
 
 		if(isset($chicas[$this->page])) {
@@ -92,7 +92,7 @@ class ChicasRepository {
 		}
 
 		foreach ( $chicas_cache as & $chica ) {
-			$chica[ 'outgoing' ] = true;
+			$chica[ 'outstanding' ] = true;
 		}
 
 		return \array_splice( $chicas_cache, 0, 5 );
