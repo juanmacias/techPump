@@ -17,4 +17,6 @@ final class Config {
 	public const IMAGES_URL = 'https://w0.imgcm.com/modelos/%s';
 
 	public const CDN_URL = 'http://cdn.techpump.local:8080/%s';
+
+	public const CACHE_EXPIRATION_TIME = 15 * 60; //15 minutes
 }

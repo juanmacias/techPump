@@ -11,7 +11,9 @@ return [
 	\techPump\Framework\Loaders\Route::class,
 	\techPump\Framework\Http\Request::class,
 	\techPump\Framework\Http\Auth::class,
+	\techPump\Framework\Http\HttpCache::class,
 	\techPump\Framework\Data\Check::class,
+	\techPump\Framework\Data\AppCache::class,
 
 	/**
 	 * Domain.
