@@ -6,6 +6,7 @@ use techPump\Config\Config;
 use techPump\Domain\Chicas\Chica;
 use techPump\Domain\Chicas\ChicasRepository;
 use techPump\Framework\Http\HttpCache;
+use techPump\Framework\Http\Request;
 
 /**
  * Class Cache. Manage basic validations of system cache.
@@ -36,7 +37,7 @@ class AppCache {
 		$this->app_token   = $token_cache;
 		$this->expire_time = $expire_time;
 
-		if(0 === $this->app_token) {
+		if ( 0 === $this->app_token ) {
 			$this->app_token = $this->guessNewToken();
 			$this->updateToken();
 		}
@@ -68,13 +69,15 @@ class AppCache {
 	 * @return int
 	 */
 	private function guessNewToken(): int {
-		$repository = new ChicasRepository();
-		$last_chicas = $repository->getOutstandings();
-		$chica = new Chica( $last_chicas[0], 1 );
+		$repository        = new ChicasRepository();
+		$last_chicas       = $repository->getOutstandings();
+		$last_chica_logged = $last_chicas[ 0 ];
 
-		$last_update = $chica->get('LastLogin');
+		$chica = new Chica( $last_chica_logged, 1 );
 
-		return  \strtotime( $last_update );
+		$last_update = $chica->get( 'LastLogin' );
+
+		return \strtotime( $last_update );
 	}
 
 	/**
@@ -118,13 +121,13 @@ class AppCache {
 	/**
 	 * Generate a http cache from etag token of navigator.
 	 *
-	 * @param null $token_etag_from_navigator
+	 * @param request $request Request data.
 	 *
 	 * @return HttpCache
 	 */
-	public function getHttpCache( ?int $token_etag_from_navigator = null ): HttpCache {
-		$token_etag_from_navigator ??= $_SERVER[ 'HTTP_IF_NONE_MATCH' ] ?? '-1';
+	public function getHttpCache( Request $request ): HttpCache {
+		$token_etag_from_navigator = $request->get( 'server' )[ 'HTTP_IF_NONE_MATCH' ] ?? HttpCache::UNDEFINED_ETAG;
 
-		return new HttpCache( $token_etag_from_navigator, $this->app_token );
+		return new HttpCache( (string) $token_etag_from_navigator, $this->app_token . "_" . $request->getCurrentNumPage() );
 	}
 }
