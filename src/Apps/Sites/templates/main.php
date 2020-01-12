@@ -18,7 +18,7 @@
 
 <div class="btns">
 	<?php if ( $this->vars[ 'page' ] > 1 ): ?>
-       <a class="btn-mas-modelos" href="/<?= $this->vars[ 'page' ] ?>" title="Mostrar más modelos">Anterior Página</a>
+       <a class="btn-mas-modelos" href="/<?= ( $this->vars[ 'page' ] - 1 ) ?>" title="Mostrar más modelos">Anterior Página</a>
 	<?php endif; ?>
 
    <a class="btn-mas-modelos" href="/<?= $this->vars[ 'page' ] + 1 ?>" title="Mostrar más modelos">Siguiente Página</a>
