@@ -7,6 +7,7 @@ use techPump\Domain\Chicas\Chica;
 use techPump\Domain\Chicas\ChicasRepository;
 use techPump\Framework\Http\HttpCache;
 use techPump\Framework\Http\Request;
+use techPump\Framework\Pages\TemplateCache;
 
 /**
  * Class Cache. Manage basic validations of system cache.
@@ -15,9 +16,7 @@ use techPump\Framework\Http\Request;
  */
 class AppCache {
 
-	private const CACHE_ID       = 'techpump_token';
-
-	private const CACHE_PAGES_ID = 'techpump_pages_token';
+	private const CACHE_ID = 'techpump_token';
 
 	/**
 	 * App_token is also time of last update in API.
@@ -96,7 +95,6 @@ class AppCache {
 		$this->app_token = $new_token = $this->generateNewToken();
 
 		apcu_store( self::CACHE_ID, $new_token );
-		apcu_store( self::CACHE_PAGES_ID, [] );
 	}
 
 	/**
@@ -129,5 +127,16 @@ class AppCache {
 		$token_etag_from_navigator = $request->get( 'server' )[ 'HTTP_IF_NONE_MATCH' ] ?? HttpCache::UNDEFINED_ETAG;
 
 		return new HttpCache( (string) $token_etag_from_navigator, $this->app_token . "_" . $request->getCurrentNumPage() );
+	}
+
+	/**
+	 * Retrieve a template cache object
+	 *
+	 * @param string $template
+	 *
+	 * @return TemplateCache
+	 */
+	public function getTemplateCache( string $template ): TemplateCache {
+		return new TemplateCache( $template, $this->app_token );
 	}
 }

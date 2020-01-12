@@ -7,6 +7,7 @@ return [
 	\techPump\Config\Config::class,
 	\techPump\Framework\Pages\Page::class,
 	\techPump\Framework\Pages\AppPage::class,
+	\techPump\Framework\Pages\TemplateCache::class,
 	\techPump\Framework\Controllers\Controller::class,
 	\techPump\Framework\Loaders\Route::class,
 	\techPump\Framework\Http\Request::class,
@@ -30,13 +31,11 @@ return [
 	\techPump\Domain\Chicas\Chicas::class,
 	\techPump\Domain\Chicas\ChicasRepository::class,
 
-
 	/**
 	 * Sites
 	 */
 	\techPump\Apps\Sites\App::class,
 	\techPump\Apps\Sites\Controllers\Home::class,
-
 
 	/**
 	 * Cms
