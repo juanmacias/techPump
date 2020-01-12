@@ -15,7 +15,7 @@ class Home extends Controller {
 	final public function getPage(): Page {
 		$page = $this->request->getCurrentNumPage();
 
-		$cached_template_file = $this->templates_path . '/cache/page_' . $page . '.php';
+		$cached_template_file = $this->templates_path . '/cached_main/page_' . $page . '.php';
 
 		$this->checkCaches( $cached_template_file);
 
