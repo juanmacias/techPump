@@ -9,7 +9,7 @@ namespace techPump;
  */
 class SiteCest {
 
-	private const EXPECTED_CHICAS_COUNT = 36;
+	private const EXPECTED_CHICAS_COUNT = 65;
 
 	public function _before( AcceptanceTester $I ) {
 		$I->amOnPage( 'http://cerdas.com' );
