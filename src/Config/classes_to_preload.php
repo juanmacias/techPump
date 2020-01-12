@@ -14,18 +14,27 @@ return [
 	\techPump\Framework\Data\Check::class,
 
 	/**
-	 * Domain. Site module.
+	 * Domain.
 	 */
+
+	/* Sites Module */
 	\techPump\Domain\Sites\Site::class,
 	\techPump\Domain\Sites\Sites::class,
 	\techPump\Domain\Sites\SitesStore::class,
 	\techPump\Domain\Sites\SiteBuilder::class,
+
+	/* Chicas Module */
+	\techPump\Domain\Chicas\Chica::class,
+	\techPump\Domain\Chicas\Chicas::class,
+	\techPump\Domain\Chicas\ChicasRepository::class,
+
 
 	/**
 	 * Sites
 	 */
 	\techPump\Apps\Sites\App::class,
 	\techPump\Apps\Sites\Controllers\Home::class,
+
 
 	/**
 	 * Cms

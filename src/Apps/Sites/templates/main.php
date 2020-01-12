@@ -1,295 +1,32 @@
 <div class="listado-chicas">
+	<?php $lugar = 'grande-izquierda'; ?>
 
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-01.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-02.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-03.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-04.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-05.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica chica-grande">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-grande-01.jpg" width="357" height="307" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-06.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-07.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-08.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-09.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-10.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-01.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-02.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-04.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-05.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-06.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-07.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica chica-grande grande-derecha">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-grande-02.jpg" width="357" height="307" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-07.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-08.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-09.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-10.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-01.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-02.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-03.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-04.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-05.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-06.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-07.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica chica-grande">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-grande-03.jpg" width="357" height="307" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-08.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-09.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-10.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-01.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-02.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="chica">
-      <a class="link" href="#" title="">
-         <span class="thumb"><img src="http://cdn.techpump.local:8080/images/lazy.gif" data-src="http://cdn.techpump.local:8080/images/thumb-03.jpg" width="175" height="150" alt="" title=""/></span>
-         <span class="nombre-chica"> <span class="ico-online"></span> Nombre de la chica</span>
-         <span id="favorito" class="ico-favorito"></span>
-      </a>
-   </div>
-
-   <div class="clear"></div>
-
-   <a class="btn-mas-modelos" href="#" title="Mostrar más modelos">Siguiente Página</a>
+	<?php  foreach ( $this->vars[ 'chicas_list' ] as $index => $chica ): ?>
+       <div class="<?= $chica->getTags()  ?>">
+          <a class="link" href="<?= $chica->getWebCamLink() ?>?nats=<?= $this->site->get( 'nats_webcams' ) ?>"
+             title="<?= $chica->getName() ?>">
+             <span class="thumb"><img src="<?= $this->getCdnUrl('images/lazy.gif') ?>" data-src="<?= $chica->getImageUrl() ?>" width="175"
+                                      height="150" alt="Foto de <?= $chica->getName() ?>" title="<?= $chica->getName() ?>"/></span>
+             <span class="nombre-chica"> <span class="ico-<?= $chica->getStatus(); ?>"></span> <?= $chica->getName() ?></span>
+             <span id="favorito" class="ico-favorito"></span>
+          </a>
+       </div>
+	<?php endforeach;  ?>
 
 </div>
+
+<div class="clear"></div>
+
+<div class="btns">
+	<?php if ( $this->vars[ 'page' ] > 1 ): ?>
+       <a class="btn-mas-modelos" href="/<?= $this->vars[ 'page' ] ?>" title="Mostrar más modelos">Anterior Página</a>
+	<?php endif; ?>
+
+   <a class="btn-mas-modelos" href="/<?= $this->vars[ 'page' ] + 1 ?>" title="Mostrar más modelos">Siguiente Página</a>
+</div>
+
+<div id="iframe--modal">
+   <a href="javascript:void(0)"><img src="<?= $this->getCdnUrl('images/x.png') ?>" width="25" height="29" /></a>
+</div>
+
+<div class="iframe--modal--background">&nbsp;</div>

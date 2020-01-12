@@ -105,9 +105,8 @@ body{
 
 /**/
 .btn-mas-modelos{ 
-	display:block; background:url("images/btn-mas-modelos.png") left top no-repeat; width:195px; height:46px; margin:20px auto;
+	display:inline-block; background:url("images/btn-mas-modelos.png") left top no-repeat; width:195px; height:46px; margin:20px auto;
 	font-size:14px; color:#FFF; text-decoration:none; text-align:center; line-height:44px;
-
 	-moz-text-shadow: 0px 1px 0px #E94400;
 	-o-text-shadow: 0px 1px 0px #E94400;
 	-ms-text-shadow: 0px 1px 0px #E94400;

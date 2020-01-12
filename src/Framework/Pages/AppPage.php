@@ -2,6 +2,8 @@
 
 namespace techPump\Framework\Pages;
 
+use techPump\Config\Config;
+
 /**
  * Class AppPage. A template page.
  *
@@ -116,5 +118,16 @@ class AppPage extends Page {
 		$this->vars[ 'js_files' ][ $position ] ??= [];
 
 		$this->vars[ 'js_files' ][ $position ][] = $js_file;
+	}
+
+	/**
+	 * Retrieve a suburl from cdn url
+	 *
+	 * @param string $sub_url
+	 *
+	 * @return string
+	 */
+	public function getCdnUrl(string $sub_url = ''): string {
+		return sprintf(Config::CDN_URL, $sub_url );
 	}
 }

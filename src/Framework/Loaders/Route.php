@@ -4,6 +4,7 @@ namespace techPump\Framework\Loaders;
 
 use techPump\Domain\Sites\Site;
 use techPump\Framework\Controllers\Controller;
+use techPump\Framework\Data\Check;
 use techPump\Framework\Http\Request;
 
 /**
@@ -40,7 +41,7 @@ class Route {
 	 * @return Controller
 	 */
 	public function getController(): Controller {
-		$action = $this->request->get( 'action' ) ?: '';
+		$action = Check::key( $this->request->get( 'action' ), '' );
 
 		if ( !$action ) {
 			return $this->getDefaultController();

@@ -6,9 +6,9 @@
    <title><?= $this->site->get('name') ?></title>
 
    <!-- Star CSS and Javascript -->
-   <link rel="stylesheet" href="http://cdn.techpump.local:8080/css/reset.min.css" type="text/css" media="screen,projection">
+   <link rel="stylesheet" href="<?= $this->getCdnUrl('css/site.min.css') ?>" type="text/css" media="screen,projection">
    <link rel="stylesheet" href="/css/estilos.css" type="text/css" media="screen,projection">
    <!-- end CSS and Javascript -->
 </head>
 
-<body>
+<body data-analytics="<?= $this->site->get('analytics') ?>">
