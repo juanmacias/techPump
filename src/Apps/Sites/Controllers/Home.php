@@ -78,7 +78,7 @@ class Home extends Controller {
 
 		$chicas_list  = $chicas_store->getAll();
 
-		$cached_template->generate( $this->templates_path . '/template_to_cache.php', [ 'chicas_list' => $chicas_list ] );
+		$cached_template->generate( $this->templates_path . '/base/main.php', [ 'chicas_list' => $chicas_list ] );
 	}
 
 }
