@@ -13,6 +13,11 @@ class TemplateCache {
 	private   $last_update_time_in_api;
 	protected $vars = [];
 
+	const LINE_BREAKS = '/[\n\r]/';
+	const COMMENTS = '/<!--\s.*?-->/';
+	const MORE_THAN_TWO_WHITE_SPACES = '/\s{2,}/s';
+	const WHITE_SPACE = ' ';
+
 	/**
 	 * TemplateCache constructor.
 	 *
@@ -71,6 +76,20 @@ class TemplateCache {
 
 		$template_content = str_replace( [ '[[PHP]]', '[[ECHO_PHP]]', '[[CLOSE_PHP]]' ], [ '<?php', '<?=', '?>' ], $template_content );
 
-		return $template_content;
+		return $this->minify_html_content( $template_content );
+	}
+
+	/**
+	 * Helper: Minify html content of template.
+	 *
+	 * @param $html_content
+	 *
+	 * @return string
+	 */
+	private function minify_html_content($html_content): string {
+		$to_remove = [ self::LINE_BREAKS, self::COMMENTS, self::MORE_THAN_TWO_WHITE_SPACES ];
+		$replacement = self::WHITE_SPACE;
+
+		return preg_replace($to_remove, $replacement, $html_content)?: '';
 	}
 }
