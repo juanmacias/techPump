@@ -1,5 +1,4 @@
 <div class="listado-chicas">
-	<?php $lugar = 'grande-izquierda'; ?>
 
 	<?php  foreach ( $this->vars[ 'chicas_list' ] as $index => $chica ): ?>
        <div class="<?= $chica->getTags()  ?>">
