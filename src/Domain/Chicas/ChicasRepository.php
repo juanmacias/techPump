@@ -11,7 +11,8 @@ use techPump\Config\Config;
  */
 class ChicasRepository {
 
-	private const ENDPOINT           = 'http://webcams.cumlouder.com/feed/webcams/online/61/%d/';
+	private const ENDPOINT = 'http://webcams.cumlouder.com/feed/webcams/online/61/%d/';
+
 	private $page;
 
 	/**
@@ -38,7 +39,7 @@ class ChicasRepository {
 
 		$outstandings = $this->getOutstandings();
 
-		$chicas_list = $this->addOutstandingsInTheirPlace($chicas_list, $outstandings);
+		$chicas_list = $this->addOutstandingsInTheirPlace( $chicas_list, $outstandings );
 
 		//Remove first girl. According specification
 		array_shift( $chicas_list );
@@ -52,7 +53,7 @@ class ChicasRepository {
 	 * @param $chicas_list
 	 * @param $outstandings
 	 */
-	private function addOutstandingsInTheirPlace($chicas_list, $outstandings): array {
+	private function addOutstandingsInTheirPlace( $chicas_list, $outstandings ): array {
 		//-1 because of photo removed after
 		$position             = - 1;
 		$foto_grande_position = Config::OUTSTANDING_CHICAS_INTERVAL;
@@ -78,12 +79,12 @@ class ChicasRepository {
 	public function getOutstandings() {
 		static $chicas;
 
-		if(isset($chicas[$this->page])) {
-			return $chicas;
+		if ( isset( $chicas[ $this->page ] ) ) {
+			return $chicas[ $this->page ];
 		}
 
-		$chicas[$this->page] = [];
-		$chicas_cache = &$chicas[$this->page];
+		$chicas[ $this->page ] = [];
+		$chicas_cache          = &$chicas[ $this->page ];
 
 		$chicas_cache = $this->getChicasFromAPI();
 
@@ -111,12 +112,12 @@ class ChicasRepository {
 			return $chicas[ $this->page ];
 		}
 
-		$chicas[$this->page] = [];
-		$chicas_cache = &$chicas[$this->page];
+		$chicas[ $this->page ] = [];
+		$chicas_cache          = &$chicas[ $this->page ];
 
 		$endpoint = sprintf( self::ENDPOINT, $this->pagge );
 
-		$json                  = \file_get_contents( $endpoint ) ?: '';
+		$json         = \file_get_contents( $endpoint ) ?: '';
 		$chicas_cache = json_decode( $json, true ) ?: [];
 
 		return $chicas_cache;
