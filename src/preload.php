@@ -15,3 +15,6 @@ $preloader = new ClassPreloader( __DIR__ );
 
 $classes_to_preload = include __DIR__ . '/Config/classes_to_preload.php';
 $preloader->load( $classes_to_preload );
+
+//preload site bootstraps
+opcache_compile_file( __DIR__.'/../public/sites/bootstrap.php' );
