@@ -41,5 +41,5 @@ You can use admin / techpump credentials. You can modify them from ``src/Config/
 From `src/codeception`( or `/var/www/html/src/codeception` inside of container ) run:
 
 ```shell
-php ../vendor/bin/codecept run --steps -d
+php ../vendor/bin/codecept run --steps
 ```

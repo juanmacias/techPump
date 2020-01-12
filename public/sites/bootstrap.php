@@ -14,7 +14,7 @@ if ( !defined( '__TECH_PUMP_SITE__' ) ) {
 }
 
 $site    = ( new SitesStore() )->getSite( __TECH_PUMP_SITE__ );
-$request = new Request( $_REQUEST );
+$request = new Request( $_REQUEST, $_SERVER ?: $_ENV );
 
 $route      = new Route( App::NAMESPACE, $request, $site );
 $controller = $route->getController();

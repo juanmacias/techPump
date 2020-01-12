@@ -6,6 +6,10 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 # Opcache
 RUN docker-php-ext-install opcache
 
+# Install APCu
+RUN pecl install apcu
+RUN echo "extension=apcu.so" > "$PHP_INI_DIR/conf.d/apcu.ini"
+
 # Install basic tools
 RUN apt-get update && apt-get install -y wget
 RUN apt-get install -y vim git

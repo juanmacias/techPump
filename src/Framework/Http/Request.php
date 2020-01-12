@@ -16,8 +16,9 @@ class Request {
 	 *
 	 * @param array<string, mixed> $request_data
 	 */
-	public function __construct( array $request_data ) {
-		$this->data = $request_data;
+	public function __construct( array $request_data, array $server_data = [] ) {
+		$this->data             = $request_data;
+		$this->data[ 'server' ] = $server_data;
 	}
 
 	/**
