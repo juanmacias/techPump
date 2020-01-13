@@ -35,7 +35,7 @@ You can use admin / techpump credentials. You can modify them from ``src/Config/
 1. Click in `Add` button
 1. Fill inputs and save form.
 1. Add your css files to /public/sites/site_domain/css
-1. Add `127.0.0.1 site_domain` in `/server/conf/dns/etc_hosts`
+1. Add `127.0.0.1 site_domain` in your `/etc/hosts`
 1. That's all
 
 ## Running tests
