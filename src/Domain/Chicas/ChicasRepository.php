@@ -115,7 +115,7 @@ class ChicasRepository {
 		$chicas[ $this->page ] = [];
 		$chicas_cache          = &$chicas[ $this->page ];
 
-		$endpoint = sprintf( self::ENDPOINT, $this->pagge );
+		$endpoint = sprintf( self::ENDPOINT, $this->page );
 
 		$json         = \file_get_contents( $endpoint ) ?: '';
 		$chicas_cache = json_decode( $json, true ) ?: [];
