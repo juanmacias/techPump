@@ -22,7 +22,7 @@ class ChicasRepository {
 	 *
 	 */
 	public function __construct( int $page = 1 ) {
-		$this->pagge = $page ?: 1;
+		$this->page = $page ?: 1;
 	}
 
 	/**
