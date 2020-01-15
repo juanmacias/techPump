@@ -10,7 +10,7 @@ Add `127.0.0.1   cerdas.com` line in your `/etc/hosts` file. This is demo site.
 
 Add `127.0.0.1   conejox.com` line in your `/etc/hosts` file. This is demo site.
 
-Please, add write permissions to directories: `/src/Sites/templates/cached_main`,  `/src/vendor` and `/public/sites`.
+Please, add write permissions to directories: `/src/App/Sites/templates/cached_main`,  `/src/vendor` and `/public/sites`.
 
 ## Starting server
 
