@@ -2,7 +2,7 @@
 
 ## Requirements
 
-Add `127.0.0.1   sites.techpump.local` line in your `/etc/hosts` file. This is for manage sites.
+Add `127.0.0.1   sites.techpump.local` line in your `/etc/hosts` file. This is for managing sites.
 
 Add `127.0.0.1   cdn.techpump.local` line in your `/etc/hosts` file. This is for cdn of public sites.
 
@@ -40,7 +40,7 @@ You can use admin / techpump credentials. You can modify them from ``src/Config/
 
 ## Running tests
 
-From `src/codeception`( or `/var/www/html/src/codeception` inside of container ) run:
+From  `/var/www/html/src/codeception`( inside of container ) run:
 
 ```shell
 php ../vendor/bin/codecept run --steps
